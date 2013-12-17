@@ -9,10 +9,10 @@ LetterWritingRails::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   #   get '/write' => 'homes#write'
-  get "static_pages/write"
-  get "static_pages/address"
-  get "static_pages/send"
-  get "static_pages/confirmation"
+  get "static_pages/new"
+  get "static_pages/edit"
+  get "static_pages/new-send"
+  get "static_pages/show"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
