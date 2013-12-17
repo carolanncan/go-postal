@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Go Postal</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+<title>Go Postal</title>
+<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+<%= @shortened_url.url %>
 </head>
 <body>
+
+<header>
+  <div class="breadcrumb-box">
+    <div class="third center">
+      <h2 class="current-step circle">1</h2>
+      <h6>Write</h6>
+    </div>
+
+    <div class="third center ">
+      <h2 class="circle inactive-step">2</h2>
+      <h6 class="italic inactive-step">Address</h6>
+    </div>
+
+    <div class="third center">
+      <h2 class="circle inactive-step">3</h2>
+      <h6 class="italic inactive-step">Send</h6>
+    </div>
+  </div>
+  <hr>
+
+  <article class="center-txt">
+    <h2>Just fill this out:</h2>
+  </article>
+
+</header>
+
 
 <%= yield %>
 
