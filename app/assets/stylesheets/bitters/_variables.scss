@@ -1,0 +1,46 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+
+$sans-serif: $helvetica;
+$serif: $georgia;
+$merriweather: 'merriweather', georgia, serif;
+
+$base-font-family: $merriweather;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$blue: #3B77B0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+$brown: #6E5226;
+$light-brown: #F2EAD7;
+$red: #B43C40;
+$off-white: #F9F5EC;
+
+//  Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $blue;
+$secondary-accent-color: $red;
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: $base-accent-color;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
