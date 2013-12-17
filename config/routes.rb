@@ -8,8 +8,8 @@ LetterWritingRails::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-     get '/write' => 'homes#write'
-
+  #   get '/write' => 'homes#write'
+get "static_pages/write"
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
