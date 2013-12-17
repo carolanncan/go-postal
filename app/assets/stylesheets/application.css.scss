@@ -26,6 +26,11 @@ html{
 
 //Containers
 
+header.breadcrumb {
+  border-bottom: 1px solid lighten($blue, 40);
+  margin-bottom: 3em;
+}
+
 header.index {
   @include pad(default);
   margin: $base-line-height * 6 0 0;
