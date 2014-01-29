@@ -1,18 +1,40 @@
 <%= render 'breadcrumb' %>
+<script>
+var sections = $('.section'),
+    links = $('.link'),
+    lis = $('.links > li');
 
-<section class="clear" data-spy="scroll" data-target=".navbar-example"">
+$(window).scroll(function() {
+    var currentPosition = $(this).scrollTop();
+    links.removeClass('selected');
+    lis.removeClass('active-slide');
+    
+    sections.each(function() {
+        var top = $(this).offset().top,
+            bottom = top + $(this).height();
+        
+        if (currentPosition >= top && currentPosition <= bottom) {
+            var link = $('a[href="#' + this.id + '"]');
+            link.addClass('selected');
+            link.parent().addClass('active-slide');
+        }
+    });
+    
+});</script>
+
+<section id="section1" class="section clear" data-spy="scroll">
   <div class="page-wrapper">
     <%= render 'letter' %>
   </div>
 </section>
 
-<section class="clear" data-spy="scroll" data-target=".navbar-example"">
+<section id="section2" class="section clear" data-spy="scroll">
   <div class="page-wrapper">
     <%= render 'address' %>
   </div>
 </section>
 
-<section class="clear" data-spy="scroll" data-target=".navbar-example"">
+<section id="section3" class="section clear" data-spy="scroll">
   <div class="page-wrapper">
     <%= render 'send' %>
   </div>

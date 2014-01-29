@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+
+var sections = $('.section'),
+    links = $('.link'),
+    lis = $('.links > li');
+
+$(window).scroll(function() {
+    var currentPosition = $(this).scrollTop();
+    links.removeClass('selected');
+    lis.removeClass('active-slide');
+
+    sections.each(function() {
+        var top = $(this).offset().top,
+            bottom = top + $(this).height();
+
+        if (currentPosition >= top && currentPosition <= bottom) {
+            var link = $('a[href="#' + this.id + '"]');
+            link.addClass('selected');
+            link.parent().addClass('active-slide');
+        }
+    });
+
+});

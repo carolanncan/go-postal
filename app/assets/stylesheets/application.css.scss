@@ -22,27 +22,50 @@
 
 html{
   background: white;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 
 //Containers
-
-header.breadcrumb {
-  background: $dark-blue;
-  border-bottom: 1px solid lighten($blue, 40);
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
 
 header.index {
   @include pad(default);
   margin: $base-line-height * 6 0 0;
 }
 
+//Graphic Features
+
+nav {
+  @include pad(default);
+  background: $dark-blue;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline;
+      margin: 4em;
+  }
+}
+}
+ .current-step {
+   color: white;
+   border: 1px solid darken($base-accent-color, 10);
+   box-shadow: 0px 0px 5px darken($base-accent-color, 4);
+   background: $base-accent-color;
+ }
+
+ .inactive-step {
+   border: $secondary-accent-color;
+ }
 section {
   &:first-of-type {
-    padding-top: 7em;
+    padding-top: 4em;
   }
 }
 
@@ -125,26 +148,8 @@ article {
   clear: both;
 }
 
-//Graphic Features
+.section {height:300px;}
+.selected {color:red}
+li.active-slide {background-color:blue;}
 
-.breadcrumb-box {
-  overflow: hidden;
-  margin: .5em auto;
- }
-
- .circle {
-   width: 3em;
-   margin: .2em  auto;
-   border: 1px dashed $secondary-accent-color;
- }
-
- .current-step {
-   color: white;
-   border: 1px solid darken($base-accent-color, 10);
-   box-shadow: 0px 0px 5px darken($base-accent-color, 4);
-   background: $base-accent-color;
- }
-
- .inactive-step {
-   border: $secondary-accent-color;
- }
+.links {position:fixed; top:0; left:0;}
