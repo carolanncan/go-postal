@@ -10,7 +10,7 @@ $form-font-family: $base-font-family;
 fieldset {
   background: lighten($base-border-color, 50);
   border: 1px solid $base-border-color;
-  margin: 0 0 ($base-line-height / 2) 0;
+  margin: 3em 0;
   padding: $base-line-height;
 }
 
@@ -44,8 +44,8 @@ textarea,
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
+  margin-bottom: $base-line-height;
+  padding: ($base-line-height / 2) ($base-line-height / 2);
   resize: vertical;
   width: 100%;
 
@@ -86,4 +86,5 @@ input[type="submit"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  margin: 1em;
 }

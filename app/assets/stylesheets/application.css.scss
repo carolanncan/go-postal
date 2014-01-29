@@ -21,14 +21,18 @@
 @import 'neat';
 
 html{
-  background: $off-white;
+  background: white;
 }
+
 
 //Containers
 
 header.breadcrumb {
+  background: $dark-blue;
   border-bottom: 1px solid lighten($blue, 40);
-  margin-bottom: 3em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 header.index {
@@ -36,33 +40,51 @@ header.index {
   margin: $base-line-height * 6 0 0;
 }
 
+section {
+  &:first-of-type {
+    padding-top: 7em;
+  }
+}
+
+article {
+  margin: 2em;
+}
+
 .container{
   @include outer-container;
 }
 
 .page-wrapper {
-  @include span-columns(8 of 12);
-  @include shift (2);
-  margin-bottom: $base-line-height;
+  @include span-columns(10 of 12);
+  @include shift (1);
+  border-bottom: 1px solid lighten($blue, 40);
+  padding: 3em 0;
 }
 
 .half {
-  @include clearfix;
-
+  @include span-columns(6);
     input {
-      float: left;
-      width: 49%;
-
-      &:first-child {
-        margin-right: 2%;
-      }
+      @include omega(2)
     }
 }
 
-
 .third {
   @include span-columns(4);
-  @include omega(5);
+  @include omega(3);
+}
+
+.form-half {
+  @include clearfix;
+
+  input {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 .form-third {
@@ -99,19 +121,20 @@ header.index {
   margin: 0 auto;
 }
 
+.clear {
+  clear: both;
+}
+
 //Graphic Features
 
 .breadcrumb-box {
   overflow: hidden;
-  margin: $base-line-height * 1.5 auto;
+  margin: .5em auto;
  }
 
  .circle {
-   @include pad(.2em .3em);
-   border-radius: 50%;
-   width: 2em;
-   height: 2em;
-   margin: .2em auto;
+   width: 3em;
+   margin: .2em  auto;
    border: 1px dashed $secondary-accent-color;
  }
 
@@ -123,6 +146,5 @@ header.index {
  }
 
  .inactive-step {
-   color: lighten($secondary-accent-color, 20);
+   border: $secondary-accent-color;
  }
-
