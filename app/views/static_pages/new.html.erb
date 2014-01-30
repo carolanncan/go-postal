@@ -7,7 +7,7 @@ var sections = $('.section'),
 $(window).scroll(function() {
     var currentPosition = $(this).scrollTop();
     links.removeClass('selected');
-    lis.removeClass('active-slide');
+    lis.removeClass('active');
     
     sections.each(function() {
         var top = $(this).offset().top,
@@ -16,25 +16,25 @@ $(window).scroll(function() {
         if (currentPosition >= top && currentPosition <= bottom) {
             var link = $('a[href="#' + this.id + '"]');
             link.addClass('selected');
-            link.parent().addClass('active-slide');
+            link.parent().addClass('active');
         }
     });
     
 });</script>
 
-<section id="section1" class="section clear" data-spy="scroll">
+<section>
   <div class="page-wrapper">
     <%= render 'letter' %>
   </div>
 </section>
 
-<section id="section2" class="section clear" data-spy="scroll">
+<section>
   <div class="page-wrapper">
     <%= render 'address' %>
   </div>
 </section>
 
-<section id="section3" class="section clear" data-spy="scroll">
+<section>
   <div class="page-wrapper">
     <%= render 'send' %>
   </div>
