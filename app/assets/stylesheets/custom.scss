@@ -1,0 +1,94 @@
+html{
+  background: lighten($off-white, .2);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+//Navigation
+nav {
+  @include pad(default);
+  background: $red;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      @include pad (2.1em 2.5em);
+      display: inline;
+      &:hover, &:active {
+        background: lighten($red, 10);
+      }
+    }
+  }
+}
+
+//Structure
+header.index {
+  @include pad(default);
+  margin: $base-line-height * 6 0 0;
+}
+
+section {
+  &:first-of-type {
+    padding-top: 4em;
+  }
+}
+
+article {
+  margin: 2em;
+}
+
+.container{
+  @include outer-container;
+}
+
+.page-wrapper {
+  @include span-columns(10 of 12);
+  @include shift (1);
+  border-bottom: 1px solid $blue;
+  padding: 3em 0;
+}
+
+.half {
+  @include span-columns(6);
+    input {
+      @include omega(2)
+    }
+}
+
+.third {
+  @include span-columns(4);
+  @include omega(3);
+}
+
+.form-half {
+  @include clearfix;
+
+  input {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.form-third {
+  @include clearfix;
+
+    input {
+      float: left;
+      width: 32%;
+      margin-right: 2%;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+}
