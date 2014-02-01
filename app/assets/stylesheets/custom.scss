@@ -92,3 +92,17 @@ article {
       }
     }
 }
+
+[contenteditable="true"] {
+  @include pad(3.5em);
+  @include span-columns(10);
+  @include shift(1);
+  background: white;
+  box-shadow: 2px 2px 4px 2px lighten($brown, 60);
+  font-size: 1.3em;
+  min-height: 700px;
+  &:active, &:focus {
+    border: 1px solid $blue;
+    outline: none;
+  }
+}

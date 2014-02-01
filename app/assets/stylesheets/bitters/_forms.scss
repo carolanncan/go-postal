@@ -9,7 +9,7 @@ $form-font-family: $base-font-family;
 
 fieldset {
   background: lighten($base-border-color, 50);
-  border: 1px solid $base-border-color;
+  border: 1px dashed $red;
   margin: 3em 0;
   padding: $base-line-height;
 }
@@ -37,9 +37,8 @@ label {
 textarea,
 #{$all-text-inputs} {
   @include box-sizing(border-box);
-  @include transition(border-color);
+ @include transition(border-color);
   background-color: white;
-  border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
