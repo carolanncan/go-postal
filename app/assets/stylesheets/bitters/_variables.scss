@@ -1,22 +1,18 @@
 // Typography
-///////////////////////////////////////////////////////////////////////////////
-
 $sans-serif: $helvetica;
 $serif: $georgia;
-$merriweather: 'merriweather', georgia, serif;
+//$merriweather: 'merriweather', georgia, serif;
+$actor: 'Actor', sans-serif;
 
-$base-font-family: $merriweather;
+$base-font-family: $actor;
 $header-font-family: $base-font-family;
 
 // Sizes
-///////////////////////////////////////////////////////////////////////////////
 $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(3);
 
 // Colors
-///////////////////////////////////////////////////////////////////////////////
-
 $blue: #3B77B0;
 $dark-blue: #111432;
 $dark-gray: #333;
@@ -34,9 +30,10 @@ $off-white: #F9F5EC;
 $base-font-color: $dark-blue;
 $base-accent-color: $blue;
 $secondary-accent-color: $red;
+
 //  Text Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: darken($red, 15);
 
 // Border color
 $base-border-color: $base-accent-color;
