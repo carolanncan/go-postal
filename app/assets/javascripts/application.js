@@ -14,26 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//
 
-var sections = $('.section'),
-    links = $('.link'),
-    lis = $('.links > li');
-
-$(window).scroll(function() {
-    var currentPosition = $(this).scrollTop();
-    links.removeClass('selected');
-    lis.removeClass('active-slide');
-
-    sections.each(function() {
-        var top = $(this).offset().top,
-            bottom = top + $(this).height();
-
-        if (currentPosition >= top && currentPosition <= bottom) {
-            var link = $('a[href="#' + this.id + '"]');
-            link.addClass('selected');
-            link.parent().addClass('active-slide');
-        }
-    });
-
+$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 400) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 400) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
 });

@@ -1,0 +1,17 @@
+header
+  section
+    h1 Go Postal
+  nav
+    ul
+      a href="#write"
+        li Write
+
+      a href="#address"
+        li Address
+
+      a href="#send"
+        li Send
+<div id="wrapper">
+    <span id="menu" style="">hold this</span>
+</div>
+= render 'prompt'
