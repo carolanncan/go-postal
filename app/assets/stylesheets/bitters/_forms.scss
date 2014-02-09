@@ -53,7 +53,7 @@ textarea,
   margin-bottom: $base-line-height;
   outline: 0;
   padding: ($base-line-height / 2) ($base-line-height / 2);
-  resize: vertical;
+  resize: none;
   width: 100%;
 
   &:hover {
@@ -68,6 +68,22 @@ textarea,
 
 input[type="search"] {
   @include appearance(none);
+}
+
+
+.letter textarea {
+  background: white;
+  border: 1px solid $light-gray;
+  box-shadow: 2px 2px 2px 1px $light-gray; margin: 3em 0;
+  font-size: 1em;
+  min-height: 600px;
+  padding: 2em;
+  resize: vertical;
+
+  &:active, &:focus {
+    border: 1px solid darken($blue, 40);
+    outline: none;
+  }
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -93,9 +109,9 @@ input[type="submit"] {
   color: $off-white;
   cursor: pointer;
   letter-spacing: 1;
-  margin: 1em;
+  margin: 1em 0;
   outline: none;
-  padding: 1em 2em;
+  padding: .5em 2em;
   text-transform: uppercase;
   user-select: none;
   vertical-align: middle;

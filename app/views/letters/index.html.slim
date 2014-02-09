@@ -11,7 +11,7 @@ section
 
     - @letters.each do |letter|
       tr
-        td = letter.content
+        td = truncate letter.content
         td = letter.user_id
         td = link_to 'Show', letter
         td = link_to 'Edit', edit_letter_path(letter)
