@@ -4,7 +4,7 @@ LetterWritingRails::Application.routes.draw do
   resources :users
 
   get "static_pages/home"
-  get "static_pages/new_letter"
+  get "static_pages/dasboard"
   root 'static_pages#home'
 
   get "static_pages/new"

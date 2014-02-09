@@ -14,12 +14,7 @@ header#banner {
 nav {
   @include span-columns(12);
   @include pad(1em 0);
-  background-color: $base-accent-color;
-  border-bottom: 1px solid darken($base-accent-color, 10);
-  font-size: 1.2em;
-  height: 4em;
   letter-spacing: 1;
-  text-align: center;
   text-transform: uppercase;
 
   ul {
@@ -28,10 +23,32 @@ nav {
     li {
       @include pad (1.02em 2.5em);
       display: inline;
+    }
+  }
+}
 
-      &:hover, &:active, .active {
+nav.global {
+  background-color: $red;
+  border-bottom: 1px dashed darken($red, 10);
+  font-size: 1em;
+  height: 3em;
+  text-align: right;
+
+  a {
+    color: $white;
+  }
+}
+
+nav.actions {
+  background-color: $base-accent-color;
+  border-bottom: 1px solid darken($base-accent-color, 10);
+  font-size: 1.2em;
+  height: 4em;
+  text-align: center;
+
+  li {
+    &:hover, &:active, .active {
       background: darken($blue, 10);
-      }
     }
   }
 }
@@ -142,6 +159,7 @@ footer {
   background: darken($white, 5);
   border-top: 1px solid darken($white, 9);
   height: 100px;
+  margin-top: 300px;
   width: 100%;
 
   p {
