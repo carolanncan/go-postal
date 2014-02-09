@@ -1,0 +1,24 @@
+section
+  h2 Listing letters
+
+  table
+    tr
+      th Content
+      th User
+      th
+      th
+      th
+
+    - @letters.each do |letter|
+      tr
+        td = letter.content
+        td = letter.user_id
+        td = link_to 'Show', letter
+        td = link_to 'Edit', edit_letter_path(letter)
+        td = link_to 'Destroy', letter, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+  br
+
+  = link_to new_letter_path do
+    .button
+      | New letter

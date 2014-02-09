@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Content:
+  = @letter.content
+p
+  strong User:
+  = @letter.user_id
+
+= link_to 'Edit', edit_letter_path(@letter)
+'|
+= link_to 'Back', letters_path

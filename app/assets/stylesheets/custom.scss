@@ -151,3 +151,17 @@ footer {
     line-height: 55px;
   }
 }
+
+.button {
+  border: 1px solid darken($base-accent-color, 20);
+  border-radius: 30px;
+  width: auto;
+  display: inline-block;
+  padding: .2em .5em;
+
+  &:hover {
+  @include transition (all 0.2s ease-in);
+  background-color: darken($base-accent-color, 40);
+  color: #fff;
+  }
+}
