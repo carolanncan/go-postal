@@ -1,11 +1,10 @@
 LetterWritingRails::Application.routes.draw do
-  resources :letters
-
   resources :users
-
+  resources :letters
+  resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
   match '/signup',  to: 'users#new', via: 'get'
-  get "static_pages/home"
-  get "static_pages/dasboard"
+  match '/signin',  to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
 end
