@@ -7,6 +7,9 @@ html
     = csrf_meta_tags
 
   body
-  = render 'shared/nav'
-  = yield
-  = render 'shared/footer'
+    = render 'shared/nav'
+      - flash.each do |key, value|
+        = content_tag(:div, value, class: "alert alert-#{key}")
+    = yield
+    = render 'shared/footer'
+    = debug(params) if Rails.env.development?

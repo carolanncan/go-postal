@@ -18,3 +18,13 @@ html{
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba($off-white, .3) 0 0 1px;
 }
+
+/* miscellaneous */
+
+.debug_dump {
+  box-sizing: border-box;
+  clear: both;
+  float: left;
+  margin-top: 45px;
+  width: 100%;
+}
