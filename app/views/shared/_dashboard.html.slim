@@ -1,0 +1,18 @@
+/! Nav tabs
+ul.nav.nav-tabs
+  li.active
+    a href="#home" data-target="home" data-toggle="tab" Home
+  li
+    a href="#profile" data-target="#profile" data-toggle="tab" Profile
+
+.tab-content
+  #home.tab-pane.active
+    p Something
+  #profile.tab-pane
+    p else
+
+javascript:
+  $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })

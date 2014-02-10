@@ -140,21 +140,6 @@ article {
     }
 }
 
-[contenteditable="true"] {
-  @include pad(4em);
-  @include span-columns(12);
-  background: white;
-  border: 1px solid $light-gray;
-  box-shadow: 2px 2px 2px 1px $light-gray; margin: 3em 0;
-  font-size: 1em;
-  min-height: 700px;
-
-  &:active, &:focus {
-    border: 1px solid $blue;
-    outline: none;
-  }
-}
-
 footer {
   background: darken($white, 5);
   border-top: 1px solid darken($white, 9);
@@ -181,5 +166,15 @@ footer {
   @include transition (all 0.2s ease-in);
   background-color: darken($base-accent-color, 40);
   color: #fff;
+  }
+}
+
+.gravatar {
+  img {
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid $white;
+    width: 5em;
+    box-shadow: 0 0 9px darken($light-gray, 20);
   }
 }
