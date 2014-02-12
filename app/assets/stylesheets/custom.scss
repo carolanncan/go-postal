@@ -30,7 +30,7 @@ nav {
 nav.global {
   background-color: $red;
   border-bottom: 1px dashed darken($red, 10);
-  font-size: 1em;
+  font-size: .85em;
   height: 3em;
   text-align: right;
 
@@ -169,13 +169,36 @@ footer {
   }
 }
 
+section.user-info {
+  @include span-columns(3);
+  background: #fff;
+  border: 1px dashed $red;
+  padding: 2em;
+}
+
 .gravatar {
   img {
-    display: inline-block;
+    @include size(10em);
     border-radius: 50%;
-    border: 5px solid $white;
-    width: 5em;
+    border: 1px solid white;
     box-shadow: 0 0 9px darken($light-gray, 20);
+    display: block;
+    margin: 0 auto 1.3em;
+  }
+}
+
+.username {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  line-height: $base-line-height;
+  border-top: 1px solid darken($base-accent-color, 20);
+  padding-top: 1em;
+  margin-top: 1em;
+  text-transform: uppercase;
+
+  .email {
+    font-size: 1rem;
+    text-transform: none;
   }
 }
 

@@ -1,17 +1,16 @@
 section
   p#notice = notice
   - provide(:title, @user.name)
-  h3
+  section.user-info
     .gravatar
       = gravatar_for @user
-    = @user.name
-  p
-    strong Email:
-    = @user.email
+    .username
+      = @user.name
+      .email
+        = @user.email
+    = link_to edit_user_path(@user) do
+      | Edit
 
-
-  //= render 'shared/dashboard'
-
-  = link_to 'Edit', edit_user_path(@user)
-  '|
-  = link_to 'Back', users_path
+  section
+    .actions
+      = link_to 'Back', users_path
