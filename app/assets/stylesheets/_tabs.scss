@@ -1,0 +1,48 @@
+.bettertabs {
+  @include span-columns(8);
+  @include shift(2);
+  margin: 0 1em;
+
+ul.tabs {
+  position: relative;
+  border-bottom: 1px solid $base-border-color;
+  padding-bottom: 2.3em;
+
+    li {
+      background: $white;
+      display: inline;
+      font-size: 1.3em;
+      float: left;
+      line-height: 24px;
+      list-style: none outside none;
+      margin-right: .2em;
+      padding: .3em .8em;
+      position: relative;
+      top: 1px;
+      z-index: 1;
+
+      &.active {
+      border-color: $base-border-color $base-border-color $white $base-border-color;
+      border-style: solid;
+      border-radius: 3px 3px  0px;
+      border-width: 1px;
+      }
+
+      a {
+        font-size: 80%;
+        text-decoration: none;
+        float: left;
+      }
+    }
+  }
+}
+
+.content {
+  padding: 1em;
+  clear: left;
+  z-index: 2;
+
+  &.hidden {
+    display: none;
+  }
+}

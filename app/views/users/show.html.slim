@@ -6,11 +6,18 @@ section
       = gravatar_for @user
     .username
       = @user.name
-      .email
-        = @user.email
+      //.email
+       // = @user.email
     = link_to edit_user_path(@user) do
       | Edit
+  = bettertabs :simpletabs do |tab|
+      = tab.link :tab1, class: "tab" 'Address Book' do
+        p This is text.
+      = tab.link :tab2, 'Letter Archive' do
+        ul
+          li Letter to Grandma
+          li Letter to Mary
+          li Letter to Papa Joe
+  .actions
+    = link_to 'Back', users_path
 
-  section
-    .actions
-      = link_to 'Back', users_path

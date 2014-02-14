@@ -12,21 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.bettertabs.min
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 400) {
-      $('#nav_bar').addClass('navbar-fixed');
-    }
-    if ($(window).scrollTop() < 400) {
-      $('#nav_bar').removeClass('navbar-fixed');
-    }
-  });
-});
+jQuery('.bettertabs').bettertabs(); // apply bettertabs to any element with the bettertabs css class

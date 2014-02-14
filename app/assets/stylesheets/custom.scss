@@ -13,7 +13,7 @@ header#banner {
 
 nav {
   @include span-columns(12);
-  @include pad(1em 0);
+  @include pad(.6em 0);
   letter-spacing: 1;
   text-transform: uppercase;
 
@@ -29,7 +29,7 @@ nav {
 
 nav.global {
   background-color: $red;
-  border-bottom: 1px dashed darken($red, 10);
+  border-bottom: 4px solid darken($red, 4);
   font-size: .85em;
   height: 3em;
   text-align: right;
@@ -89,7 +89,6 @@ ul.prompt {
 section {
   @include outer-container;
   margin-bottom: 4em;
-  padding: 0 1em;
 }
 
 hgroup {
@@ -131,8 +130,8 @@ article {
 
     input {
       float: left;
-      width: 32%;
       margin-right: 2%;
+      width: 32%;
 
       &:last-of-type {
         margin-right: 0;
@@ -158,9 +157,9 @@ footer {
 .button {
   border: 1px solid darken($base-accent-color, 20);
   border-radius: 30px;
-  width: auto;
   display: inline-block;
   padding: .2em .5em;
+  width: auto;
 
   &:hover {
   @include transition (all 0.2s ease-in);
@@ -171,30 +170,39 @@ footer {
 
 section.user-info {
   @include span-columns(3);
-  background: #fff;
-  border: 1px dashed $red;
-  padding: 2em;
+  border-right: 1px solid $base-border-color;
+  height: 100%;
+  padding-right: 10px;
 }
 
 .gravatar {
+   border-radius: 5px;
+    @include size(15em);
+    margin: 1em 0;
+    opacity: .9;
+    box-shadow: inset 0px 0px 90px darken($white, 90);
+
   img {
-    @include size(10em);
-    border-radius: 50%;
-    border: 1px solid white;
-    box-shadow: 0 0 9px darken($light-gray, 20);
     display: block;
-    margin: 0 auto 1.3em;
+    overflow: hidden;
+    -webkit-filter:grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -ms-filter:grayscale(100%);
+    -o-filter:grayscale(100%);
+    filter:grayscale(100%);
+    filter: gray;
   }
 }
 
 .username {
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  line-height: $base-line-height;
-  border-top: 1px solid darken($base-accent-color, 20);
-  padding-top: 1em;
-  margin-top: 1em;
-  text-transform: uppercase;
+  border-bottom: 1px solid $base-border-color;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .5;
+  line-height: 1.3;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  text-transform: capitalize;
 
   .email {
     font-size: 1rem;
