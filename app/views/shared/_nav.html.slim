@@ -1,11 +1,16 @@
 nav.global
-  ul
-    li= link_to "Home", root_path
-    - if signed_in?
-      li= link_to "Users", '#'
-      li= link_to "Profile", current_user
-      li= link_to "Settings", '#'
+  .outer-container
+    ul.pull-left
       li
-        = link_to "Sign out", signout_path, method: "delete"
-    - else
-      li= link_to "Sign in", signin_path
+        = link_to "Home", root_path
+
+    ul.pull-right
+      - if signed_in?
+        li
+          = link_to "Profile", current_user
+        li
+          = link_to "Settings", '#'
+        li
+          = link_to "Sign out", signout_path, method: "delete"
+      - else
+        li= link_to "Sign in", signin_path

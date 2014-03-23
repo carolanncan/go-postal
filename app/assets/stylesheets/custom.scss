@@ -1,67 +1,18 @@
 //Navigation
 
 header#banner {
-  @include span-columns(12);
+  @include position(absolute, 0px 0px 0px 0px);
   background-color: $red;
-  height: 400px;
+  height: 100%;
   overflow: hidden;
-  padding: 9em 0;
-  p {
-      color: $off-white;
-  }
-}
-
-nav {
-  @include span-columns(12);
-  @include pad(.6em 0);
-  letter-spacing: 1;
-  text-transform: uppercase;
-
-  ul {
-    list-style: none;
-
-    li {
-      @include pad (1.02em 2.5em);
-      display: inline;
-    }
-  }
-}
-
-nav.global {
-  background-color: $red;
-  border-bottom: 4px solid darken($red, 4);
-  font-size: .85em;
-  height: 3em;
-  text-align: right;
-
-  a {
-    color: $white;
-  }
-}
-
-nav.actions {
-  background-color: $base-accent-color;
-  border-bottom: 1px solid darken($base-accent-color, 10);
-  font-size: 1.2em;
-  height: 4em;
   text-align: center;
+  z-index: 1;
 
-  li {
-    &:hover, &:active, .active {
-      background: darken($blue, 10);
-    }
-  }
 }
 
-.navbar-fixed {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-}
-
-#nav_bar {
-  height: auto;
-  margin-bottom: 0;
+.center-content {
+  margin: 0 auto;
+  padding: 25% 0;
 }
 
 
@@ -88,7 +39,6 @@ ul.prompt {
 
 section {
   @include outer-container;
-  margin-bottom: 4em;
 }
 
 hgroup {

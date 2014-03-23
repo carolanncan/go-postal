@@ -1,0 +1,28 @@
+nav.global {
+  @include position(fixed, 0px 0 0 0px);
+  background-color: $red;
+  border-bottom: 4px solid darken($red, 4);
+  height: auto;
+  padding: 1.2em 0;
+  width: 100%;
+  z-index: 2;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-right: 1.5em;
+      display: inline;
+    }
+  }
+}
+
+a {
+  color: $white;
+
+  &:hover {
+    color: $white;
+    border-bottom: 1px solid $off-white;
+    padding-bottom: .2em;
+  }
+}
