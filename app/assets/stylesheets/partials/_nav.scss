@@ -13,16 +13,16 @@ nav.global {
     li {
       margin-right: 1.5em;
       display: inline;
+      a {
+        color: $white;
+
+        &:hover {
+          color: $white;
+          border-bottom: 1px solid $off-white;
+          padding-bottom: .2em;
+        }
+      }
     }
   }
 }
 
-a {
-  color: $white;
-
-  &:hover {
-    color: $white;
-    border-bottom: 1px solid $off-white;
-    padding-bottom: .2em;
-  }
-}

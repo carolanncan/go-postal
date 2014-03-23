@@ -1,7 +1,7 @@
 .bettertabs {
-  @include span-columns(8);
-  @include shift(2);
-  margin: 0 1em;
+  @include span-columns(9);
+  @include shift(2.5);
+  margin: 0;
 
 ul.tabs {
   position: relative;
@@ -9,10 +9,10 @@ ul.tabs {
   padding-bottom: 2.3em;
 
     li {
-      background: $white;
+      background: $off-white;
       display: inline;
-      font-size: 1.3em;
       float: left;
+      font-size: 1.3em;
       line-height: 24px;
       list-style: none outside none;
       margin-right: .2em;
@@ -22,13 +22,14 @@ ul.tabs {
       z-index: 1;
 
       &.active {
-      border-color: $base-border-color $base-border-color $white $base-border-color;
+      border-color: $base-border-color $base-border-color $off-white $base-border-color;
       border-style: solid;
       border-radius: 3px 3px  0px;
       border-width: 1px;
       }
 
       a {
+        color: $base-accent-color;
         font-size: 80%;
         text-decoration: none;
         float: left;
@@ -38,8 +39,10 @@ ul.tabs {
 }
 
 .content {
-  padding: 1em;
+  border-left: 1px solid $base-border-color;
   clear: left;
+  height: 100%;
+  padding: 1em;
   z-index: 2;
 
   &.hidden {

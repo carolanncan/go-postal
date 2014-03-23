@@ -1,0 +1,75 @@
+section.sidebar {
+  @include span-columns(3);
+  @include omega(1n);
+  padding-right: 10px;
+  margin-top: 5em;
+
+}
+
+.user-info {
+  @include transition(all .15s linear);
+  background: lighten($off-white, 3);
+  border-radius: 5px;
+  height: auto;
+  padding: 1.5em;
+
+  &:hover {
+    background: $white;
+    .edit {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .edit {
+    float: right;
+    letter-spacing: normal;
+    opacity: 0;
+    visibility: hidden;
+
+    i {
+      font-size: 1rem;
+      margin-left: .4em;
+    }
+  }
+
+  a {
+    color: $base-accent-color;
+  }
+}
+
+.gravatar {
+  @include size(10em);
+  opacity: .9;
+  border-radius: 5px;
+  margin-bottom: 1.3em;
+
+  img {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.username {
+  color: $base-accent-color;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: .5;
+  line-height: 1.7;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  text-transform: capitalize;
+
+  .email {
+    font-size: 1rem;
+    text-transform: none;
+  }
+}
+
+.actions {
+
+}
+
+section.tabs {
+  margin-top: 5em;
+}

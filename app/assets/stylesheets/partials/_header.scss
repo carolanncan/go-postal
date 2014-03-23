@@ -1,0 +1,14 @@
+header {
+  @include position(absolute, 0px 0px 0px 0px);
+  background-color: $red;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+
+}
+
+.wrap-content {
+  margin: 0 auto;
+  padding: 25% 0;
+}

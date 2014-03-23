@@ -1,23 +1,26 @@
 section
   p#notice = notice
   - provide(:title, @user.name)
-  section.user-info
-    .gravatar
-      = gravatar_for @user
-    .username
-      = @user.name
-      .email
-        = @user.email
-    = link_to edit_user_path(@user) do
-      | Edit
-  = bettertabs :simpletabs do |tab|
-      = tab.link :tab1, class: "tab" 'Address Book' do
-        p This is text.
-      = tab.link :tab2, 'Letter Archive' do
+
+  section.sidebar
+    .user-info
+      .edit
+        = link_to edit_user_path(@user) do
+          | Edit
+          i.fa.fa-pencil
+      .gravatar
+        = gravatar_for @user
+      .username
+        = @user.name
+        .email
+          = @user.email
+
+  section.tabs
+    = bettertabs :simpletabs do |tab|
+      = tab.link :tab1, 'Address' do
+        p Addresses
+      = tab.link :tab2, 'Letters' do
         ul
           li Letter to Grandma
           li Letter to Mary
           li Letter to Papa Joe
-  .actions
-    = link_to 'Back', users_path
-

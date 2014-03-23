@@ -1,8 +1,9 @@
 // Typography
 $sans-serif: $helvetica;
 $serif: $georgia;
-$merriweather: 'merriweather', georgia, serif;
-$actor: 'Actor', sans-serif;
+$merriweather: 'merriweather', $serif;
+$actor: 'Actor', $sans-serif;
+$icon-font: 'FontAwesome';
 
 $base-font-family: $actor;
 $header-font-family: $actor;
@@ -13,7 +14,7 @@ $base-line-height: $base-font-size * 1.55;
 $base-border-radius: em(3);
 
 // Colors
-$blue: #D1E1F0;
+$blue: #3B7BB0;
 $dark-blue: #1B3350;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -24,8 +25,8 @@ $light-green: #E6EFC2;
 $brown: #6E5226;
 $light-brown: #F2EAD7;
 $red: #BF4042;
-$white: #FCFAF7;
-$off-white: darken($white, 1);
+$white: #fff;
+$off-white: #F3F3F3;
 
 //  Font Colors
 $base-font-color: $dark-gray;
@@ -33,11 +34,11 @@ $base-accent-color: $blue;
 $secondary-accent-color: $red;
 
 //  Text Link Colors
-$base-link-color: darken($base-accent-color, 40);
-$hover-link-color: darken($blue, 45);
+$base-link-color: darken($base-accent-color, 10);
+$hover-link-color: darken($blue, 15);
 
 // Border color
-$base-border-color: darken($base-accent-color, 20);
+$base-border-color: $base-accent-color;
 
 // Flash Colors
 $error-color: $light-red;

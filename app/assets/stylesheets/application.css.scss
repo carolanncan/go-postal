@@ -7,14 +7,17 @@
 @import "bitters/bitters";
 @import 'bitters/grid-settings';
 @import 'neat';
+@import 'font-awesome';
 
 @import 'custom';
-@import 'helper';
-@import 'nav';
-@import 'tabs';
+@import 'partials/header';
+@import 'partials/helper';
+@import 'partials/nav';
+@import 'partials/tabs';
+@import 'partials/users';
 
 html{
-  background: $white;
+  background: $off-white;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 1;
   text-shadow: rgba($off-white, .3) 0 0 1px;

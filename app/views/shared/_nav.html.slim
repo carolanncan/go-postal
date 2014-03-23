@@ -3,6 +3,8 @@ nav.global
     ul.pull-left
       li
         = link_to "Home", root_path
+      li
+        = link_to 'Back', users_path
 
     ul.pull-right
       - if signed_in?
