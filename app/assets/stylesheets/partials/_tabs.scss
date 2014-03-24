@@ -1,3 +1,7 @@
+section.tabs {
+  margin-top: 7em;
+}
+
 .bettertabs {
   @include span-columns(9);
   @include shift(2.5);
@@ -9,7 +13,6 @@ ul.tabs {
   padding-bottom: 2.3em;
 
     li {
-      background: $off-white;
       display: inline;
       float: left;
       font-size: 1.3em;
@@ -22,15 +25,25 @@ ul.tabs {
       z-index: 1;
 
       &.active {
-      border-color: $base-border-color $base-border-color $off-white $base-border-color;
-      border-style: solid;
-      border-radius: 3px 3px  0px;
-      border-width: 1px;
+        background: $white;
+        border-color: $base-border-color $base-border-color transparent $base-border-color;
+        border-style: solid;
+        border-radius: 3px 3px  0px;
+        border-width: 1px;
+      }
+
+      &:active, &:focus {
+        a {
+          border-radius: 4px;
+          background: $off-white;
+          color: $hover-link-color;
+        }
       }
 
       a {
         color: $base-accent-color;
         font-size: 80%;
+        padding: 0 .4em;
         text-decoration: none;
         float: left;
       }
@@ -39,7 +52,7 @@ ul.tabs {
 }
 
 .content {
-  border-left: 1px solid $base-border-color;
+  border-left: 1px solid $base-accent-color;
   clear: left;
   height: 100%;
   padding: 1em;

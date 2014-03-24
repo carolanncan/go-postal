@@ -84,20 +84,6 @@ footer {
   }
 }
 
-.button {
-  border: 1px solid darken($base-accent-color, 20);
-  border-radius: 30px;
-  display: inline-block;
-  padding: .2em .5em;
-  width: auto;
-
-  &:hover {
-  @include transition (all 0.2s ease-in);
-  background-color: darken($base-accent-color, 40);
-  color: #fff;
-  }
-}
-
 #error_explanation {
   color: #f00;
   ul {

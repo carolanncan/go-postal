@@ -103,11 +103,13 @@ select {
 button,
 input[type="submit"] {
   @include appearance(none);
-  background: darken($base-accent-color, 30);
+  background: $base-accent-color;
   border: none;
-  box-shadow: 1px 1px 0px 2px darken($blue, 40);
-  color: $off-white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px 1px darken($base-accent-color, 10);
+  color: $white;
   cursor: pointer;
+  display: inline-block;
   letter-spacing: 1;
   margin: 1em 0;
   outline: none;
@@ -117,9 +119,24 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
 
-    &:hover, &:active, &:focus {
-      background: darken($base-accent-color, 10);
-      box-shadow: 1px 1px 0px 2px darken($blue, 20);
-      outline: 0;
-    }
+  &:hover, &:active, &:focus {
+    @include transition (all 0.2s ease-in);
+    background: darken($base-accent-color, 6);
+    box-shadow: 1px 1px 0px 2px darken($base-accent-color, 14);
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.outline {
+  background: transparent;
+  border-radius: 30px;
+  border: 1px solid $white;
+  box-shadow: none;
+  color: $white;
+
+  &:hover {
+    background: rgba($white, .2);
+    box-shadow: none;
+  }
 }

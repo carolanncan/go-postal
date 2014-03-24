@@ -3,16 +3,28 @@ nav.global
     ul.pull-left
       li
         = link_to "Home", root_path
-      li
-        = link_to 'Back', users_path
 
     ul.pull-right
+      li
+        = link_to users_path do
+          i.fa.fa-angle-left
+          | Back
+
       - if signed_in?
         li
           = link_to "Profile", current_user
         li
-          = link_to "Settings", '#'
-        li
           = link_to "Sign out", signout_path, method: "delete"
       - else
         li= link_to "Sign in", signin_path
+  div
+    a.js-menu-trigger.menu-anchor ☰
+  nav.js-menu.sliding-menu-content
+    ul
+      li
+        a href="#"  Item 1
+      li
+        a href="#"  Item 2
+      li
+        a href="#"  Item 3
+  .js-menu-screen.menu-screen

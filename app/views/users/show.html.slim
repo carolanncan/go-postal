@@ -4,20 +4,20 @@ section
 
   section.sidebar
     .user-info
-      .edit
-        = link_to edit_user_path(@user) do
-          | Edit
-          i.fa.fa-pencil
       .gravatar
         = gravatar_for @user
       .username
         = @user.name
         .email
           = @user.email
+      .edit
+        = link_to edit_user_path(@user) do
+          | Edit
+          i.fa.fa-pencil
 
   section.tabs
     = bettertabs :simpletabs do |tab|
-      = tab.link :tab1, 'Address' do
+      = tab.link :tab1, 'Address Book' do
         p Addresses
       = tab.link :tab2, 'Letters' do
         ul

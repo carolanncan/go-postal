@@ -1,50 +1,40 @@
 section.sidebar {
   @include span-columns(3);
-  margin-top: 4.5em;
+  @include omega(1n);
+  padding-right: 10px;
+  margin-top: 5em;
+
 }
 
 .user-info {
   @include transition(all .15s linear);
+  background: lighten($off-white, 3);
   border-radius: 5px;
   height: auto;
   padding: 1.5em;
 
   &:hover {
+    background: $white;
     .edit {
-      border-color: lighten($base-accent-color, 33);
       opacity: 1;
-
-      a {
-        color: lighten($base-accent-color, 23);
-      }
+      visibility: visible;
     }
   }
 
   .edit {
-    @include transition(all .15s linear);
-    border-radius: 33px;
-    border: 1px solid transparent;
-    display: inline-block;
+    float: right;
     letter-spacing: normal;
     opacity: .5;
-    padding: .1em .5em;
+    visibility: hidden;
 
     i {
       font-size: 1rem;
       margin-left: .4em;
     }
-
-    &:hover {
-      background: lighten($base-accent-color, 43);
-
-      a {
-        color: $base-accent-color;
-      }
-    }
   }
 
   a {
-    color: lighten($base-accent-color, 10);
+    color: $base-accent-color;
   }
 }
 
@@ -74,4 +64,12 @@ section.sidebar {
     font-size: 1rem;
     text-transform: none;
   }
+}
+
+.actions {
+
+}
+
+section.tabs {
+  margin-top: 5em;
 }

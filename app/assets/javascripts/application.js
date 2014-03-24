@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= sliding_menu.js
 //= require jquery
 //= require jquery_ujs
 //= require jquery.bettertabs.min
