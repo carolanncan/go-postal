@@ -1,30 +1,27 @@
 nav.global
   .outer-container
-    ul.pull-left
-      li
-        = link_to "Home", root_path
-
     ul.pull-right
       li
         = link_to users_path do
           i.fa.fa-angle-left
           | Back
 
-      - if signed_in?
-        li
-          = link_to "Profile", current_user
-        li
-          = link_to "Sign out", signout_path, method: "delete"
-      - else
-        li= link_to "Sign in", signin_path
-  div
-    a.js-menu-trigger.menu-anchor ☰
-  nav.js-menu.sliding-menu-content
-    ul
-      li
-        a href="#"  Item 1
-      li
-        a href="#"  Item 2
-      li
-        a href="#"  Item 3
-  .js-menu-screen.menu-screen
+    ul.pull-left
+      div
+        a.js-menu-trigger.menu-anchor
+          i.fa.fa-bars
+
+      nav.js-menu.sliding-menu-content
+        ul
+          li
+            = link_to "Home", root_path
+
+          - if signed_in?
+            li
+              = link_to "Profile", current_user
+            li
+              = link_to "Sign out", signout_path, method: "delete"
+          - else
+            li= link_to "Sign in", signin_path
+
+      .js-menu-screen.menu-screen
